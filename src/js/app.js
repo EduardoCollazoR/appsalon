@@ -334,9 +334,9 @@ function deshabilitarFecha() {
 
   const year = fechaAhora.getFullYear();
   const mes = fechaAhora.getMonth() + 1;
-  const dia = fechaAhora.getDate() + 1;
+  const dia = fechaAhora.getDate();
   //formato AAAA-MM-DD
-  const fechaDeshabilitar = `${year}-${mes}-${dia}`;
+  const fechaDeshabilitar = `${year}-${mes < 10 ? `0${mes}` : mes}-${dia}`;
   inputFecha.min = fechaDeshabilitar;
 }
 
